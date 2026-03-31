@@ -52,3 +52,8 @@ See `/screenshots` folder for training runs and dataset views.
 ## best_model.pth
 **Note:** The trained model file (`best_model.pth`) is not included due to size limitations. It can be reproduced by running `train.py`.
 
+## Future Work
+1. Further improve performance by refining edge-case samples,
+2. Experiment with advanced architectures under relaxed constraints,
+3. Explore automated label correction using model feedback,
+4. Extend this workflow to larger, real-world datasets
