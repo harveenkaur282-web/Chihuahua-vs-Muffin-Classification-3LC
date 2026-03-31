@@ -32,3 +32,7 @@ Improving data quality (labels) significantly boosted performance more than mode
 ## Screenshots
 
 See `/screenshots` folder for training runs and dataset views.
+
+## best_model.pth
+**Note:** The trained model file (`best_model.pth`) is not included due to size limitations. It can be reproduced by running `train.py`.
+
