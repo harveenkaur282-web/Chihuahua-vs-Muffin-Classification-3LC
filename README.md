@@ -2,6 +2,22 @@
 
 # Chihuahua vs Muffin Classification (3LC)
 
+## What is this?
+
+A binary image classifier that solves the internet's most important question: **is it a chihuahua or a muffin?**
+
+Built using **ResNet** as the backbone and **3LC** for dataset management, interactive labeling, and iterative retraining — this project showcases how human-in-the-loop feedback can dramatically improve model accuracy.
+
+---
+
+## 🛠️ Tech Stack
+
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![ResNet](https://img.shields.io/badge/ResNet-Transfer%20Learning-orange?style=for-the-badge&logo=tensorflow&logoColor=white)
+![3LC](https://img.shields.io/badge/3LC-Dataset%20Management-6C63FF?style=for-the-badge&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+
 ## Approach
 
 * Used ResNet-18 (trained from scratch as per competition rules)
@@ -17,8 +33,8 @@
 
 ## Results
 
-* Achieved validation accuracy: ~88–89%
-* Final Kaggle score: **0.92**
+* Achieved validation accuracy: ~94%
+* Final Kaggle score: **0.93412**
 
 ## Tools Used
 
