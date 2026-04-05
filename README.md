@@ -1,5 +1,3 @@
-# 3LC-MNNIT-AI-Hackathon-task
-
 # Chihuahua vs Muffin Classification (3LC)
 
 ## What is this?
