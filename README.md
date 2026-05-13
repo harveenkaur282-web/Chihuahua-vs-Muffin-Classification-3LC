@@ -1,54 +1,102 @@
-# Chihuahua vs Muffin Classification (3LC)
+# 🐶 Chihuahua vs 🧁 Muffin Classification
 
-## What is this?
+A professional, data-centric deep learning project focused on the classic binary classification challenge. This repository implements a ResNet-18 architecture from scratch, integrated with **3LC** for advanced data visualization and curation.
 
-A binary image classifier that solves the internet's most important question: **is it a chihuahua or a muffin?**
+## 🚀 Overview
 
-Built using **ResNet** as the backbone and **3LC** for dataset management, interactive labeling, and iterative retraining — this project showcases how human-in-the-loop feedback can dramatically improve model accuracy.
+This project aims to accurately distinguish between images of Chihuahuas and Muffins—a deceptively challenging task due to visual similarities in texture and color. Beyond simple classification, it employs a **data-centric AI workflow** using 3LC to identify mislabeled samples and analyze model embeddings.
+
+### Key Features
+- **ResNet-18 Architecture**: Custom classifier trained from scratch (no pre-trained weights) to comply with competition constraints.
+- **3LC Integration**: Seamless data management, table registration, and performance monitoring.
+- **Modular Design**: Clean separation of concerns between model architecture, data processing, and execution scripts.
+- **Production-Ready Structure**: Organized into `src/`, `scripts/`, and `configs/` for scalability.
 
 ---
 
-## 🛠️ Tech Stack
+## 🏗️ Project Structure
 
-![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![ResNet](https://img.shields.io/badge/ResNet-Transfer%20Learning-orange?style=for-the-badge&logo=tensorflow&logoColor=white)
-![3LC](https://img.shields.io/badge/3LC-Dataset%20Management-6C63FF?style=for-the-badge&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+```mermaid
+graph TD
+    A[Root] --> B[src]
+    A --> C[scripts]
+    A --> D[configs]
+    A --> E[data]
+    A --> F[models]
+    
+    B --> B1[model.py]
+    B --> B2[data.py]
+    
+    C --> C1[register.py]
+    C --> C2[train.py]
+    C --> C3[predict.py]
+    
+    D --> D1[config.yaml]
+    F --> F1[best_model.pth]
+```
 
-## Approach
+- **`src/`**: Core library code (Model architecture, Data loading).
+- **`scripts/`**: Entry point scripts for pipeline execution.
+- **`configs/`**: Hyperparameters and project settings.
+- **`models/`**: Serialized model weights.
+- **`outputs/`**: Generated submissions and results.
 
-* Used ResNet-18 (trained from scratch as per competition rules)
-* Leveraged 3LC for data-centric workflow
-* Iteratively improved labels using 3LC dashboard
+---
 
-## Key Steps
+## 🛠️ Setup & Installation
 
-* Initial training on provided dataset
-* Identified low-confidence and misclassified samples
-* Manually corrected labels in 3LC
-* Retrained model using updated dataset
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/harveenkaur282-web/Chihuahua-vs-Muffin-Classification-3LC.git
+   cd Chihuahua-vs-Muffin-Classification-3LC
+   ```
 
-## Results
+2. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-* Achieved validation accuracy: ~94%
-* Final Kaggle score: **0.93412**
+3. **Prepare Data**:
+   Ensure your data is organized as follows:
+   ```
+   data/
+   ├── train/ (chihuahua, muffin, undefined)
+   ├── val/   (chihuahua, muffin)
+   └── test/  (flat folder of images)
+   ```
 
-## Tools Used
+---
 
-* PyTorch
-* 3LC (data labeling + analysis)
+## 💻 Usage
 
-## Key Insight
+### 1. Register Data Tables
+Initialize 3LC tables for training and validation sets.
+```bash
+python scripts/register.py
+```
 
-Improving data quality (labels) significantly boosted performance more than model changes.
+### 2. Train Model
+Launch the training pipeline (ResNet-18 from scratch).
+```bash
+python scripts/train.py
+```
 
-## Screenshots
+### 3. Generate Predictions
+Generate a `submission.csv` for Kaggle using the best-performing checkpoint.
+```bash
+python scripts/predict.py
+```
 
-See `/screenshots` folder for training runs and dataset views.
+---
 
-## Future Work
-1. Further improve performance by refining edge-case samples,
-2. Experiment with advanced architectures under relaxed constraints,
-3. Explore automated label correction using model feedback,
-4. Extend this workflow to larger, real-world datasets
+## 📊 Data-Centric AI with 3LC
+
+This project utilizes [3LC](https://3lc.ai) to enhance the training workflow:
+- **Interactive Dashboards**: Visualize the dataset and identify difficult-to-classify samples.
+- **Embedding Analysis**: Project model features into 3D space to understand class separation.
+- **Data Curation**: Refine labels and manage "undefined" samples directly from the UI.
+
+---
+
+## 📜 License
+Distributed under the MIT License. See `LICENSE` for more information.
