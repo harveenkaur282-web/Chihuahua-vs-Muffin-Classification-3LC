@@ -24,7 +24,7 @@ def get_val_transforms(image_size=128):
         NORMALIZE,
     ])
 
-class TestDataset(Dataset):"
+class TestDataset(Dataset):
     def __init__(self, image_dir, transform=None, image_size=128):
         self.image_dir = Path(image_dir)
         self.transform = transform
