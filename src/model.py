@@ -2,13 +2,8 @@ import torch.nn as nn
 import torchvision.models as models
 
 class ResNet18Classifier(nn.Module):
-    """
-    ResNet-18 for Chihuahua vs Muffin classification.
-    Trained from scratch as per competition rules.
-    """
     def __init__(self, num_classes=2):
         super(ResNet18Classifier, self).__init__()
-        # Initialize without pretrained weights
         self.resnet = models.resnet18(weights=None)
         resnet_features = self.resnet.fc.in_features
         self.resnet.fc = nn.Identity()

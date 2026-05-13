@@ -1,8 +1,8 @@
-# 🐶 Chihuahua vs 🧁 Muffin Classification
+# Chihuahua vs Muffin Classification
 
 A professional, data-centric deep learning project focused on the classic binary classification challenge. This repository implements a ResNet-18 architecture from scratch, integrated with **3LC** for advanced data visualization and curation.
 
-## 🚀 Overview
+## Overview
 
 This project aims to accurately distinguish between images of Chihuahuas and Muffins—a deceptively challenging task due to visual similarities in texture and color. Beyond simple classification, it employs a **data-centric AI workflow** using 3LC to identify mislabeled samples and analyze model embeddings.
 
@@ -14,7 +14,7 @@ This project aims to accurately distinguish between images of Chihuahuas and Muf
 
 ---
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```mermaid
 graph TD
@@ -43,7 +43,7 @@ graph TD
 
 ---
 
-## 🛠️ Setup & Installation
+## Setup & Installation
 
 1. **Clone the repository**:
    ```bash
@@ -67,7 +67,7 @@ graph TD
 
 ---
 
-## 💻 Usage
+##  Usage
 
 ### 1. Register Data Tables
 Initialize 3LC tables for training and validation sets.
@@ -89,7 +89,7 @@ python scripts/predict.py
 
 ---
 
-## 📊 Data-Centric AI with 3LC
+## Data-Centric AI with 3LC
 
 This project utilizes [3LC](https://3lc.ai) to enhance the training workflow:
 - **Interactive Dashboards**: Visualize the dataset and identify difficult-to-classify samples.
@@ -98,5 +98,5 @@ This project utilizes [3LC](https://3lc.ai) to enhance the training workflow:
 
 ---
 
-## 📜 License
+## License
 Distributed under the MIT License. See `LICENSE` for more information.
