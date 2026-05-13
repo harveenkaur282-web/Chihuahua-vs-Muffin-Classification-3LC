@@ -4,7 +4,6 @@ from torchvision import transforms
 from PIL import Image
 from pathlib import Path
 
-# Standard ImageNet normalization
 NORMALIZE = transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
 
 def get_train_transforms(image_size=128):
@@ -26,10 +25,6 @@ def get_val_transforms(image_size=128):
     ])
 
 class TestDataset(Dataset):
-    """
-    Dataset for unlabeled test images.
-    Returns (image, image_id).
-    """
     def __init__(self, image_dir, transform=None, image_size=128):
         self.image_dir = Path(image_dir)
         self.transform = transform

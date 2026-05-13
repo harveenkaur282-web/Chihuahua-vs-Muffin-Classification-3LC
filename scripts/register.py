@@ -1,7 +1,6 @@
 import tlc
 from pathlib import Path
 
-# Config
 CLASSES = ["chihuahua", "muffin", "undefined"]
 PROJECT_NAME = "Chihuahua-Muffin"
 DATASET_NAME = "chihuahua-muffin"

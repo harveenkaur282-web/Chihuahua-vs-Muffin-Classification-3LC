@@ -11,7 +11,6 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from src.model import ResNet18Classifier
 from src.data import TestDataset, get_val_transforms
 
-# Config
 MODEL_PATH = "models/best_model.pth"
 TEST_DIR = "data/test"
 OUTPUT_PATH = "outputs/submission.csv"
